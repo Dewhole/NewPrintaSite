@@ -1,28 +1,15 @@
-<template>
-<div class="main">
-  <div class="section1-bg-image">
-    <header class="header">
-      <div class="header-logo"><img src="/printasite-logo.png" alt=""></div>
+<template id="app">
+<div class="main" id="app">
+      <span
+         class="menu-point"
+         v-bind:class="{active: activeSection == index}"
+         v-on:click="scrollToSection(index)"
+         v-for="(offset, index) in offsets"
+         v-bind:key="index">
+      </span>
 
-        <ul class="header-menu">
-          <div class="dropdown">
-            <button class="dropbtn">Разработка сайтов</button>
-            <div class="dropdown-content">
-              <a href="#">Интернет магазин</a>
-              <a href="#">Корпоративный сайт</a>
-              <a href="#">Landing page</a>
-              <a href="#">Сайт визитка</a>
-              <a href="#">Дизайн сайта</a>
-            </div>
-          </div>
-            <li><a href="">Портфолио</a></li>
-            <li><a href="">Контакты</a></li>
-        </ul>
-  
-      <div class="callback">
-        <a href="">Обратный звонок</a>
-      </div>
-    </header>
+  <div class="section section1-bg-image">
+    <div class="pageHeader"><pageHeader/></div>
 
       <div class="section1">
         <div class="block-for-pink">
@@ -32,7 +19,10 @@
         </div>
       </div>
     </div>
-    <div class="section2-bg-image">
+
+
+
+    <div class="section section2-bg-image">
       <div class="block-for-pink2-5">
         <div class="pink-block2">
           <div class="section2-5-content">
@@ -58,7 +48,10 @@
         </div>
       </div>
     </div>
-    <div class="section3-bg-image">
+
+
+
+    <div class="section section3-bg-image">
       <div class="block-for-pink2-5">
         <div class="pink-block3">
           <div class="section2-5-content">
@@ -84,7 +77,10 @@
         </div>
       </div>
     </div>
-    <div class="section4-bg-image">
+
+
+
+    <div class="section section4-bg-image">
       <div class="block-for-pink2-5">
         <div class="pink-block4">
           <div class="section2-5-content">
@@ -110,7 +106,10 @@
         </div>
       </div>
     </div>
-    <div class="section5-bg-image">
+
+
+
+    <div class="section section5-bg-image">
       <div class="block-for-pink2-5">
         <div class="pink-block5">
           <div class="section2-5-content">
@@ -136,7 +135,10 @@
         </div>
       </div>
     </div>
-  <div class="section6">
+
+
+
+  <div class="section section6">
     <div class="section6-bg-image">
       <div class="section6-icon"><img src="/logo-w.png" alt=""></div>
       <div class="section6-text">Мы убеждены, что при создании сайта нужно учитывать все факторы интересные для клиента, разработанный сайт должен быть удобным, понятным и функциональным для клиента. А система управления сайтом(CMS) должна максимально подходить для ваших задач и помогать в эффективном управлении сайта, а не создавать дополнительные трудности.</div>
@@ -145,17 +147,73 @@
     <div class="section6-footer">
       <div class="aaa">
       <div class="section6-pink-block">
-        <div class="section6-pink-block-icon1"><img src="" alt=""></div>
-        <div class="section6-pink-block-text"></div>
+        <div class="section6-pink-block-icon"><img src="iconshome-12.png" alt=""></div>
+        <div class="section6-pink-text-block">
+          <div class="section6-pink-block-text1">7</div>          
+          <div class="section6-pink-block-text2">Лет работы</div>  
+        </div>   
       </div>
       <div class="section6-pink-block">
-        <div class="section6-pink-block-icon2"></div>
-        <div class="section6-pink-block-text"></div>        
+        <div class="section6-pink-block-icon"><img src="iconshome-13.png" alt=""></div>
+        <div class="section6-pink-text-block">
+          <div class="section6-pink-block-text1">15</div>          
+          <div class="section6-pink-block-text2">Специалистов</div>  
+        </div>         
       </div>
       <div class="section6-pink-block">
-        <div class="section6-pink-block-icon3"></div>      
-        <div class="section6-pink-block-text"></div>          
+        <div class="section6-pink-block-icon"><img src="iconshome-14.png" alt=""></div> 
+        <div class="section6-pink-text-block">
+          <div class="section6-pink-block-text1">124</div>          
+          <div class="section6-pink-block-text2">Довольных клиента</div>  
+        </div>        
       </div>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="section section7">
+    <div class="section7-bg-image">
+      <div class="section7-hight">
+      <div class="section7-title">ПРОДВИНУТЫЙ СЕРВИС</div>
+      <div class="section7-hr"></div>
+      <div class="section7-text">Это создание сайтов под ключ, эффективно и качественно</div>
+    </div>
+    </div>
+      <div class="section7-blocks1 ">
+      <div class="section7-white-block">
+        <div class="section7-white-block-icon"><img src="iconshome-12.png" alt=""></div>
+        <div class="section7-white-title-block">АНАЛИЗ</div> 
+        <div class="section7-white-text-block">Бизнес без анализа - это игра в слепую. Мы анализируем конкурентную среду и результаты РК</div>   
+      </div>
+      <div class="section7-white-block">
+        <div class="section7-white-block-icon"><img src="iconshome-13.png" alt=""></div>
+      <div class="section7-white-title-block">ВЕБ-ДИЗАЙН</div> 
+        <div class="section7-white-text-block">Для создания уникального и продвинутого сайта мы предлагаем разработку дизайна</div>       
+      </div>
+      <div class="section7-white-block">
+        <div class="section7-white-block-icon"><img src="iconshome-14.png" alt=""></div> 
+        <div class="section7-white-title-block">МАРКЕТИНГ</div> 
+        <div class="section7-white-text-block">Для успешного продвижения своих услуг, требуется грамотное позиционирование</div>       
+      </div>
+    </div>
+
+      <div class="section7-blocks2 ">
+      <div class="section7-white-block">
+        <div class="section7-white-block-icon"><img src="iconshome-12.png" alt=""></div>
+        <div class="section7-white-title-block">ПОДДЕРЖКА</div> 
+        <div class="section7-white-text-block">Поддержка, наполнение и ведение сайта необходимы для его нормального функционирования</div>   
+      </div>
+      <div class="section7-white-block">
+        <div class="section7-white-block-icon"><img src="iconshome-13.png" alt=""></div>
+      <div class="section7-white-title-block">ПРОДВИЖЕНИЕ</div> 
+        <div class="section7-white-text-block">Без продвижения сайт не эффективен. Инструменты Яндекс и Google сделают сайт посещаемым</div>       
+      </div>
+      <div class="section7-white-block">
+        <div class="section7-white-block-icon"><img src="iconshome-14.png" alt=""></div> 
+        <div class="section7-white-title-block">ИЗОБРАЖЕНИЯ</div> 
+        <div class="section7-white-text-block">Качественные изображения делают сайт привлекательнее и увеличивают конверсию</div>       
       </div>
     </div>
   </div> 
@@ -165,17 +223,28 @@
 
 <script>
 
-
+import pageHeader from '~/components/pageHeader.vue'
 export default {
   components: {
-    
+    pageHeader,
+
   }
 }
+
+
 
 
 </script>
 
 <style>
+.pageHeader{
+  position: sticky;
+  top: 0;
+}
+.section{
+  width: 100%;
+  height: 100%;
+}
 .main{
 margin: 0;
     padding: 0;
@@ -200,13 +269,108 @@ margin: 0;
   -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
+
+/* section 7 */
+.section7-hight{
+  text-align: center;
+  margin: auto;
+}
+.section7-hr{
+  width: 170px;
+  border-top: 3px solid #959595;
+
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.section7-title{
+  font-family: "Roboto slab", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 130px;
+}
+.section7-blocks1{
+  max-width: 1220px;
+  height: 415px;
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+.section7-blocks2{
+  max-width: 1220px;
+  height: 415px;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  margin-top: -50px;
+}
+.section7-white-block-icon{
+  margin: auto;
+  margin-top: 40px;
+}
+.section7-white-title-block{
+  font-weight: 700;
+  font-size: 21px;
+  margin-bottom: 21px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+}
+.section7-white-text-block{
+    font-size: 16px;
+    color: #969696;
+    font-weight: normal;
+    line-height: 25px;
+    font-family: "Roboto light", sans-serif;
+    max-width: 300px;
+    margin: auto;
+}
+.section7-white-block{
+  background-color: #fff; 
+  width: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 /* section 6 */
+.section6{
+  max-height: 1000px;
+}
+.section6-pink-block-icon{
+  margin: auto;
+  margin-right: 10px;
+}
+.section6-pink-block-icon img{
+  width: 110%;
+  height: 110%;
+}
+.section6-pink-text-block{
+  margin:auto;
+  margin-left: 10px;
+}
+.section6-pink-block-text1{
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  line-height: 1;
+  text-align: left;
+}
+.section6-pink-block-text2{
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: 300;
+  color: #fff;
+}
 .aaa{
   max-width: 1220px;
   height: 415px;
   display: flex;
   text-align: center;
   margin: auto;
+  
 }
 .section6-pink-block{
   background-color: rgba(236, 0, 140, 0.7); 
@@ -215,7 +379,7 @@ margin: 0;
   margin-right: 15px;
   margin-top: 40px;
   margin-bottom: 40px;
-
+  display: flex;
 
 }
 .section6-bg-image{
@@ -398,16 +562,7 @@ margin: 0;
 
 
 /* section1 */
-.callback{
-  position: relative;
-  display: block;
-  float: left;
-  height: 48px;
-  top: 6px;
-  padding: 10px 25px;
-  cursor: pointer;
-  border: 2px solid #fff;
-}
+
 .block-for-pink{
 
     vertical-align: middle;
@@ -437,62 +592,4 @@ margin: 0;
   background: url(/block-1.jpg) 100% 100% no-repeat; position: absolute; top: 0%; left: 0px;
   position: relative; transform: translate3d(0px, 0%, 0px); transition: all 1000ms ease 0s;
 }
-.header-menu{
-  display: flex;
-  justify-content: space-between;
-  font-family: "Roboto slab", sans-serif;
-  padding: 18px 20px;
-  min-width: 500px;
-  
-}
-.li{
-  list-style-type: none;
-}
-.header-logo img{
-  width: 87%;
-
-}
-.header{
-  display: flex;
-  justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.6);
-  visibility: visible;
-  opacity: 1;
-  position: relative;
-  box-sizing: border-box;
-  
-}
-
-/* Dropdown Button */
-
-/* The container <div> - needed to position the dropdown content */
-
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {font-size: px;}
 </style>
-
