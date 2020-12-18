@@ -49,7 +49,6 @@
 </template>
 
 <script>
-
 import pageHeader from '~/components/pageHeader.vue'
 import pageFooter from '~/components/pageFooter.vue'
 export default {
@@ -73,7 +72,6 @@ export default {
   outline: 0;
   overflow-x: hidden;
   overflow-y: auto;
-
 }
 /* right block */
 .input.active, .input:hover{
@@ -85,7 +83,6 @@ export default {
 .bg-map{
   background-color: #303030;
 }
-
 .send-form{
   font-size: 18px;
   padding: 13px 34px;
@@ -116,7 +113,6 @@ export default {
   margin-left: 15px;
 }
 /* left block */
-
 .left-block{
   margin-left: 20px;
 }
@@ -157,9 +153,5 @@ export default {
 }  
 .phone-text{
   font-size: 16px;
-
-
 }
-
-
 </style>

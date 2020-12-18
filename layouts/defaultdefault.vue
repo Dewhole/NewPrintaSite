@@ -89,8 +89,10 @@
 </template>
 
 <script>
+
 export default {
-  data () {
+name:'defaulLayout',
+data () {
     return {
       clipped: false,
       drawer: false,

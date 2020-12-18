@@ -225,6 +225,7 @@
 
 import pageHeader from '~/components/pageHeader.vue'
 export default {
+  layout:'defaultdefault1',
   components: {
     pageHeader,
 

@@ -1,7 +1,7 @@
 <template>
-
+  <div class="fixed">
     <header class="header">
-      <div class="header-logo"><img src="/printasite-logo.png" alt=""></div>
+      <div class="header-logo"><a href="./"><img src="/printasite-logo.png" alt=""></a></div>
 
         <ul class="header-menu">
           <div class="dropdown">
@@ -22,16 +22,29 @@
         <a href="">Обратный звонок</a>
       </div>
     </header>
+  </div>
 </template>
 
-<style>
+<style scoped>
+.fixed{
 
+  position: fixed;  
+  top: 0;  
+
+  width: 100%;  
+}
+.header-menu{
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto slab", sans-serif;
+  padding: 18px 20px;
+  min-width: 400px;
+  list-style:none;
+  margin-right: 70px;
+}
 .header a{
   text-decoration: none;
   color: #fff;
-  outline: none;
-  -webkit-transition: color 0.2s ease-in-out;
-  -moz-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
@@ -46,7 +59,6 @@
   overflow-y: auto;
 }
 .callback{
-
   display: block;
   float: left;
   height: 48px;
@@ -55,15 +67,6 @@
   cursor: pointer;
   border: 2px solid #fff;
   margin-right: 20px;
-
-}
-.header-menu{
-  display: flex;
-  justify-content: space-between;
-  font-family: "Roboto slab", sans-serif;
-  padding: 18px 20px;
-  min-width: 400px;
-  list-style:none
 }
 
 .header-logo img{
@@ -80,7 +83,7 @@
   box-sizing: border-box;
   color: #fff;
   max-height: 60px;
-
+  top: auto
 }
 .dropdown{
   min-height: 43px;
@@ -101,6 +104,7 @@
     margin-top: 18px;
     width: 400px;
     text-align: center;
+    max-height: 235px;
 }
 
 /* Links inside the dropdown */
@@ -111,11 +115,12 @@
     padding: 10px 20px;
     font-size: 18px;
     color: #ffffff;
+
 }
 
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {font-size: 17px;}
+.dropdown-content a:hover {font-size: 20px; transition: 0.1s;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
